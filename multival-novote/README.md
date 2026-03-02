@@ -9,7 +9,26 @@ Allows to take a network state snapshot, devnetify to run it locally with multi 
 NOTE:
 
 Docker images always have a version tag, you can build image locally and make a special version tag.
-Meanwhile, locally avaialable binaries (injectived), are not tagged, it uses whatever binary is available.
+Meanwhile, locally available binaries (injectived), are not tagged, it uses whatever binary is available.
+
+Requirements: Make sure you have git-lfs installed and pulled the repo with `git lfs pull` to have all local files.
+
+If you already cloned:
+
+```bash
+git lfs install
+git lfs fetch --all
+git lfs checkout # or: git lfs pull
+```
+
+If you haven’t cloned yet:
+
+```bash
+git lfs install
+git clone https://github.com/InjectiveLabs/injective-devnetify-testbed
+cd injective-devnetify-testbed
+git lfs pull
+```
 
 ```bash
 # after cloning repo don't forget to initialize LFS
@@ -20,14 +39,14 @@ git lfs pull
 
 STEPS:
 
-0. *(optionally)* Re-generate target validators dirs and keys using `make gen-4` if target version changes. Uses [chain-stresser](https://github.com/InjectiveLabs/chain-stresser) binary.
+0. _(optionally)_ Re-generate target validators dirs and keys using `make gen-4` if target version changes. Uses [chain-stresser](https://github.com/InjectiveLabs/chain-stresser) binary.
 1. Download the latest [mainnet state snapshot](https://polkachu.com/tendermint_snapshots/injective) from Polkachu, put archive into `injective-1/` dir.
 2. Run `make unpack`, it will decompress and copy data into all 4 validators.
 3. Run `make devnetify`, wait for it to finish. Tip: set `UPGRADE_HANDLER_VERSION` and `DOCKER_IMAGE` in [./injective-1/.env](./injective-1/.env) file.
 4. Tada! If it exited with 0, you have a multi-validator state with 4 validators, ready to be used for testing.
 5. Run `make injectived-start` to start docker compose network of 4 validators, running continuously.
 6. Run `make injectived-stop` to stop the docker compose network and clean up.
-7. *(optionally)* Run `make clean` to remove all data and rollback to Step 1. (archive not removed, can do `make unpack` next).
+7. _(optionally)_ Run `make clean` to remove all data and rollback to Step 1. (archive not removed, can do `make unpack` next).
 
 Access the first node using CLI (via Docker container) `./injective-1/cli/injectived-cli-v1.16.4.sh` or via local binary `./injective-1/cli/injectived-cli-local.sh`
 

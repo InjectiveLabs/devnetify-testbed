@@ -264,7 +264,7 @@ external_address = ""
 seeds = ""
 
 # Comma separated list of nodes to keep persistent connections to
-persistent_peers = "010df55920457ef3bed7a7efe9571f4ee78785a0@172.127.0.2:26656,864b0a27babd8e63ae5109625b17a36e24692f88@172.127.0.3:26656,bc8e37a3a4eac058114a2f984059a331708e96ba@172.127.0.5:26656"
+persistent_peers = "50b3316ee14d4f8129d2074e163888fc793a4616@172.127.0.2:26656,212bd71aa2f6f2e1d6c6404433a56fc246ba140e@172.127.0.3:26656,f9b58f709a0ce84802af590dd5df02ea8fda4614@172.127.0.5:26656"
 
 # Path to address book
 addr_book_file = "config/addrbook.json"
@@ -307,7 +307,7 @@ pex = true
 seed_mode = false
 
 # Comma separated list of peer IDs to keep private (will not be gossiped to other peers)
-private_peer_ids = "010df55920457ef3bed7a7efe9571f4ee78785a0,864b0a27babd8e63ae5109625b17a36e24692f88,2f999a46fb2cda3e6fe32d9f7d33dd84ee8c2578,bc8e37a3a4eac058114a2f984059a331708e96ba"
+private_peer_ids = "50b3316ee14d4f8129d2074e163888fc793a4616,212bd71aa2f6f2e1d6c6404433a56fc246ba140e,a71bd13567b64c337369ea599aab1ef0115187f4,f9b58f709a0ce84802af590dd5df02ea8fda4614"
 
 # Toggle to disable guard against peers connecting from the same ip.
 allow_duplicate_ip = false
@@ -508,7 +508,7 @@ peer_query_maj23_sleep_duration = "2s"
 # considerable amount of disk space. Set to false to ensure ABCI responses are
 # persisted. ABCI responses are required for /block_results RPC queries, and to
 # reindex events in the command-line tool.
-discard_abci_responses = false
+discard_abci_responses = true
 
 # The representation of keys in the database.
 # The current representation of keys in Comet's stores is considered to be v1
@@ -580,7 +580,7 @@ initial_block_results_retain_height = 0
 # 		- When "kv" is chosen "tx.height" and "tx.hash" will always be indexed.
 #   3) "psql" - the indexer services backed by PostgreSQL.
 # When "kv" or "psql" is chosen "tx.height" and "tx.hash" will always be indexed.
-indexer = "kv"
+indexer = "null"
 
 # The PostgreSQL connection configuration, the connection format:
 #   postgresql://<user>:<password>@<host>:<port>/<db>?<opts>

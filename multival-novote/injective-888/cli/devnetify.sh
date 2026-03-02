@@ -1,5 +1,17 @@
 #!/bin/bash
 
-docker compose -f ./injective-888/docker-compose.devnetify.yml up
-sleep 1 # 5s + 1s total max time
-docker compose -f ./injective-888/docker-compose.devnetify.yml down
+set -uo pipefail
+
+COMPOSE_FILE=./injective-888/docker-compose.devnetify.yml
+
+exit_code=0
+docker compose -f "${COMPOSE_FILE}" up --abort-on-container-failure || exit_code=$?
+
+down_code=0
+docker compose -f "${COMPOSE_FILE}" down || down_code=$?
+
+if [ "${exit_code}" -ne 0 ]; then
+    exit "${exit_code}"
+fi
+
+exit "${down_code}"
