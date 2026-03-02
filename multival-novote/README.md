@@ -30,6 +30,13 @@ cd injective-devnetify-testbed
 git lfs pull
 ```
 
+```bash
+# after cloning repo don't forget to initialize LFS
+
+git lfs install
+git lfs pull
+```
+
 STEPS:
 
 0. _(optionally)_ Re-generate target validators dirs and keys using `make gen-4` if target version changes. Uses [chain-stresser](https://github.com/InjectiveLabs/chain-stresser) binary.

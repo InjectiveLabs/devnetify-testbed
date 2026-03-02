@@ -18,6 +18,14 @@ Archive of the legacy flow can be found there: [singleval-vote](singleval-vote/)
 
 ## How to run
 
+```bash
+# after cloning repo don't forget to initialize LFS
+
+git lfs install
+git lfs pull
+```
+
+
 All approaches to devnetify an existing network state are based `injectived devnetify` subcommand, implemented since `v1.16.x` and going forward.
 
 * [multival-novote](multival-novote/) - new flow
