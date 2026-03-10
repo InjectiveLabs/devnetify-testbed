@@ -1,8 +1,8 @@
 all:
 
-CHAIN_ID?=888
-VERSION_FROM?=v1.15.0
-VERSION_TO?=v1.16.0
+CHAIN_ID?=1
+VERSION_FROM?=v1.18.2
+VERSION_TO?=1.18.2
 
 devnetify:
 	./injective-$(CHAIN_ID)/cli/devnetify-$(VERSION_FROM).sh
