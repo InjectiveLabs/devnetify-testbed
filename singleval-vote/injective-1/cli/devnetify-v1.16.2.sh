@@ -1,8 +1,0 @@
-#!/bin/bash
-
-INJECTIVED="docker run -it --rm \
-    -v $(pwd)/injective-1:/apps/data/injective-1 \
-    -v $(pwd)/custom_overrides.yaml:/apps/data/custom_overrides.yaml:ro \
-    public.ecr.aws/l9h3g6c6/injective-core:v1.16.2-devnetify.3 injectived"
-
-$INJECTIVED --home "./injective-1" bootstrap-devnet --skip-confirmation --custom-overrides ./custom_overrides.yaml injective-1 inj1wpsrkfdqncagtj726cpwzrz4q2yf6gv4m9ah7l
