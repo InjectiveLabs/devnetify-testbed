@@ -7,3 +7,5 @@ GovParams:
   maxdepositperiod: 10s
   quorum: 0
   threshold: 0
+  expeditedvotingperiod: 10s
+  expeditedthreshold: 0
