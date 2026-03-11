@@ -22,7 +22,7 @@
 
   ```
   injectived tx gov submit-proposal \
-    /home/xlab/dev/InjectiveLabs/devnetify-testbed/singleval-vote/proposals/transfer_usdc_namespace_owner.json \
+    ./proposals/transfer_usdc_namespace_owner.json \
     --from <proposal_submitter> \
     --chain-id injective-1 \
     --gas auto --gas-adjustment 1.5 \
@@ -47,7 +47,7 @@
 
 ```
   injectived tx permissions update-namespace \
-    /home/xlab/dev/InjectiveLabs/devnetify-testbed/singleval-vote/proposals/remove_gov_usdc_namespace_rights.json \
+    ./proposals/remove_gov_usdc_namespace_rights.json \
     --from <key_for_inj1a5ydas7ejr7xsagcwd5a6teljm85thguhfp93u> \
     --chain-id injective-1 \
     --gas auto --gas-adjustment 1.5 \
