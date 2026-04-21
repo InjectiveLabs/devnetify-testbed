@@ -1,7 +1,7 @@
 services:
   injectived0:
     container_name: injstress-validator-0
-    image: "injectivelabs/injective-core:v1.18.2"
+    image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
       - NODE_HOME=/root/.injectived
@@ -27,7 +27,7 @@ services:
     command: injectived --home=/root/.injectived start
   injectived1:
     container_name: injstress-validator-1
-    image: "injectivelabs/injective-core:v1.18.2"
+    image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
       - NODE_HOME=/root/.injectived
@@ -45,7 +45,7 @@ services:
     command: injectived --home=/root/.injectived start
   injectived2:
     container_name: injstress-validator-2
-    image: "injectivelabs/injective-core:v1.18.2"
+    image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
       - NODE_HOME=/root/.injectived
@@ -63,7 +63,7 @@ services:
     command: injectived --home=/root/.injectived start
   injectived3:
     container_name: injstress-validator-3
-    image: "injectivelabs/injective-core:v1.18.2"
+    image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
       - NODE_HOME=/root/.injectived
