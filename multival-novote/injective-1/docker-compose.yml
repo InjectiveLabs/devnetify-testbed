@@ -1,6 +1,6 @@
 services:
   injectived0:
-    container_name: devnet-validator-0
+    container_name: injstress-validator-0
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
@@ -26,7 +26,7 @@ services:
         ipv4_address: 172.127.0.2
     command: injectived --home=/root/.injectived start
   injectived1:
-    container_name: devnet-validator-1
+    container_name: injstress-validator-1
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
@@ -44,7 +44,7 @@ services:
         ipv4_address: 172.127.0.3
     command: injectived --home=/root/.injectived start
   injectived2:
-    container_name: devnet-validator-2
+    container_name: injstress-validator-2
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
@@ -62,7 +62,7 @@ services:
         ipv4_address: 172.127.0.4
     command: injectived --home=/root/.injectived start
   injectived3:
-    container_name: devnet-validator-3
+    container_name: injstress-validator-3
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
