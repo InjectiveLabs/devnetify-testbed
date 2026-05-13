@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UPGRADE_HANDLER_VERSION=${UPGRADE_HANDLER_VERSION:-""}
+UPGRADE_HANDLER_VERSION=${UPGRADE_HANDLER_VERSION:-"v1.20.0"}
 
 injectived devnetify \
     --home ./injective-1/validators/0 \
