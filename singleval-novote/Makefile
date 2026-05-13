@@ -1,7 +1,7 @@
 all:
 
 CHAIN_ID?=1
-VERSION_TO?=v1.16.4
+VERSION_TO?=v1.20.0
 DOCKER_IMAGE?=injectivelabs/injective-core:$(VERSION_TO)
 
 devnetify:
@@ -14,7 +14,7 @@ injectived:
 	./injective-$(CHAIN_ID)/cli/injectived-$(VERSION_TO).sh
 
 injectived-local:
-	./injective-$(CHAIN_ID)/cli/injectived-local.sh
+	DEVNET_NO_SIGNATURE_VERIFICATION=1 DEVNET_NO_TIMEOUT_HEIGHT=1 ./injective-$(CHAIN_ID)/cli/injectived-local.sh
 
 injectived-cli:
 	./injective-$(CHAIN_ID)/cli/injectived-cli-$(VERSION_TO).sh
