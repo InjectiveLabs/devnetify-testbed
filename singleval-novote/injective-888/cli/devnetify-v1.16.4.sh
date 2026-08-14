@@ -3,6 +3,7 @@
 UPGRADE_HANDLER_VERSION=${UPGRADE_HANDLER_VERSION:-"v1.16.4"}
 
 INJECTIVED="docker run -it --rm \
+    -e DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true} \
     -v $(pwd)/injective-888:/apps/data/injective-888 \
     injectivelabs/injective-core:v1.16.4 injectived"
 
