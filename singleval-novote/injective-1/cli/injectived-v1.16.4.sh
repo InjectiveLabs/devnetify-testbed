@@ -3,6 +3,7 @@
 # ulimit -n 120000
 
 docker run -it --rm \
+    -e DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true} \
     -p 26657:26657 \
     -p 10337:10337 \
     -v $(pwd)/injective-1:/apps/data/injective-1 \

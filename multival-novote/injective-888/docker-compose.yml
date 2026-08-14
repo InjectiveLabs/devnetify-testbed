@@ -4,6 +4,7 @@ services:
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
+      - DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true}
       - NODE_HOME=/root/.injectived
       - CHAIN_ID=injective-888
       - MONIKER=validator-0
@@ -30,6 +31,7 @@ services:
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
+      - DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true}
       - NODE_HOME=/root/.injectived
       - CHAIN_ID=injective-888
       - MONIKER=validator-1
@@ -48,6 +50,7 @@ services:
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
+      - DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true}
       - NODE_HOME=/root/.injectived
       - CHAIN_ID=injective-888
       - MONIKER=validator-2
@@ -66,6 +69,7 @@ services:
     image: "${DOCKER_IMAGE}"
     environment:
       - DEBUG=0
+      - DEVNET_FORCE_PASS_GOV_PROPOSALS=${DEVNET_FORCE_PASS_GOV_PROPOSALS:-true}
       - NODE_HOME=/root/.injectived
       - CHAIN_ID=injective-888
       - MONIKER=validator-3
