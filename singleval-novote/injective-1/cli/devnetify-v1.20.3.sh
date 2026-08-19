@@ -1,10 +1,10 @@
 #!/bin/bash
 
-UPGRADE_HANDLER_VERSION=${UPGRADE_HANDLER_VERSION:-"v1.16.4"}
+UPGRADE_HANDLER_VERSION=${UPGRADE_HANDLER_VERSION:-"v1.20.4"}
 
 INJECTIVED="docker run -it --rm \
     -v $(pwd)/injective-1:/apps/data/injective-1 \
-    injectivelabs/injective-core:v1.16.4 injectived"
+    injectivelabs/injective-core:v1.20.3 injectived"
 
 $INJECTIVED devnetify \
     --home ./injective-1/validators/0 \
