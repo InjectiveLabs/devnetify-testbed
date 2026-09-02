@@ -25,7 +25,7 @@ services:
       localnet:
         ipv4_address: 172.127.0.2
     restart: no
-    command: injectived --home=/root/injective-1/validators/0 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} injective-1
+    command: injectived --home=/root/injective-1/validators/0 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} --preserve-existing-validators=${PRESERVE_EXISTING_VALIDATORS} injective-1
   injectived1:
     container_name: devnetify-validator-1
     image: "${DOCKER_IMAGE}"
@@ -44,7 +44,7 @@ services:
       localnet:
         ipv4_address: 172.127.0.3
     restart: no
-    command: injectived --home=/root/injective-1/validators/1 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} injective-1
+    command: injectived --home=/root/injective-1/validators/1 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} --preserve-existing-validators=${PRESERVE_EXISTING_VALIDATORS} injective-1
   injectived2:
     container_name: devnetify-validator-2
     image: "${DOCKER_IMAGE}"
@@ -63,7 +63,7 @@ services:
       localnet:
         ipv4_address: 172.127.0.4
     restart: no
-    command: injectived --home=/root/injective-1/validators/2 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} injective-1
+    command: injectived --home=/root/injective-1/validators/2 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} --preserve-existing-validators=${PRESERVE_EXISTING_VALIDATORS} injective-1
   injectived3:
     container_name: devnetify-validator-3
     image: "${DOCKER_IMAGE}"
@@ -82,7 +82,7 @@ services:
       localnet:
         ipv4_address: 172.127.0.5
     restart: no
-    command: injectived --home=/root/injective-1/validators/3 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} injective-1
+    command: injectived --home=/root/injective-1/validators/3 devnetify -y -O /root/injective-1/custom_overrides.yaml -V /root/injective-1/validators -K /root/injective-1/instances/0/accounts.json -u ${UPGRADE_HANDLER_VERSION} --preserve-existing-validators=${PRESERVE_EXISTING_VALIDATORS} injective-1
 
 networks:
   localnet:
