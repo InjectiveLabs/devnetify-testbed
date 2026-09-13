@@ -25,8 +25,8 @@ If you haven’t cloned yet:
 
 ```bash
 git lfs install
-git clone https://github.com/InjectiveLabs/injective-devnetify-testbed
-cd injective-devnetify-testbed
+git clone https://github.com/InjectiveLabs/devnetify-testbed
+cd devnetify-testbed
 git lfs pull
 ```
 

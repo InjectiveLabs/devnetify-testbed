@@ -1,7 +1,7 @@
 all:
 
 CHAIN_ID?=1
-VERSION_TO?=v1.16.4
+VERSION_TO?=v1.20.4
 DOCKER_IMAGE?=injectivelabs/injective-core:$(VERSION_TO)
 
 devnetify:

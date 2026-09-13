@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# ulimit -n 120000
-
 docker run -it --rm \
     -v $(pwd)/injective-1:/apps/data/injective-1 \
-    injectivelabs/injective-core:v1.16.4 injectived \
+    injectivelabs/injective-core:v1.18.0 injectived \
     --home "./injective-1/validators/0" \
     ${*:-"query"}
